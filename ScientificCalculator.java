@@ -18,18 +18,18 @@ public class ScientificCalculator extends JFrame implements ActionListener {
     private Stack<String> operations = new Stack<>();
 
     public ScientificCalculator() {
-        // Frame settings
+        
         setTitle("Scientific Calculator");
         setSize(400, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Display field
+        
         display = new JTextField();
         display.setEditable(false);
         display.setHorizontalAlignment(JTextField.RIGHT);
         display.setFont(new Font("Arial", Font.BOLD, 24));
 
-        // Button Panel
+        
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(5, 5, 10, 10));
         for (String text : buttons) {
@@ -39,7 +39,7 @@ public class ScientificCalculator extends JFrame implements ActionListener {
             buttonPanel.add(button);
         }
 
-        // Layout
+        
         setLayout(new BorderLayout());
         add(display, BorderLayout.NORTH);
         add(buttonPanel, BorderLayout.CENTER);
